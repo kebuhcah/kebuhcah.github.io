@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="caribe-svg.css"> </link>
+<link rel="stylesheet" type="text/css" href="caribe-html.css"> </link>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"> </link>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap-theme.min.css"> </link>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<head>
+  <title>Petrocaribe</title
+</head>
+<body>
+  <header class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <span class="glyphicon glyphicon-oil" aria-hidden="true"></span>
+          Petrocaribe: A Comedy of Errors
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-info" id="content-panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            <span class="content-title">Information</span>
+          </h3>
+        </div>
+        <ol class="breadcrumb">
+          <li class="intro-link active"><a href="#" class="inactivelink">Intro</a></li>
+          <li class="country-name hidden"><a href="#">(Country)</a></li>
+          <li class="data-link hidden"><b><a href="#">DATA</a></b></li>
+        </ol>
+        <div class="panel-body" id="info-intro-content">
+          <p><b>Petrocaribe</b> is an oil alliance between Venezuela and 17 Caribbean countries that seeks to provide favorable trade deals for refined and unrefined petroleum. It formed in 2005, one year after many of the same countries created the Bolivarian Alliance for the Peoples of Our America, an economic alliance known as ALBA. It was created with the help of Cuba and was initiated by former Venezuelan president Hugo Chavez to foster an integrated economic system. ALBA also has its own digital currency, known as the Sucre, which was only used for the first time in 2010.</p>
+          <p>Petrocaribe does not offer a discount to member countries. Instead, it promises an extended timetable for payment, allowing countries to defer repayment for long periods of time, even decades. This structure has had a downside, though, allowing countries to rack up debt. In 2015, Jamaica had to sell $2 billion in bonds to pay down its debt to Venezuela. After Venezuela’s economy lagged due to falling oil prices, it began to seek some of the money it was owed through the Petrocaribe system, putting more pressure on member nations.</p>
+          <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#introModal">
+            Read more...
+          </button>
+        </div>
+        <div id="info-data-container" class="hidden">
+          <table id="info-data-table" class="table table-striped table-condensed">
+            <tr id="info-data-country">
+              <th width="40%">Country Name</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-joined-year">
+              <th>Joined in</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-consumption">
+              <th>Total Consumption (Estimate)</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-quota">
+              <th>Petrocaribe Quota</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-actual">
+              <th>Actual Petrocaribe Shipments in 2015</th>
+              <td>LOL</td>
+            </tr>
+            <tr id="info-data-products">
+              <th>Products Supplied</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-infra">
+              <th>Infrastructure Projects</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-social">
+              <th>Social Projects</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-alba">
+              <th>Alba Alimentos</th>
+              <td></td>
+            </tr>
+            <tr id="info-data-joint">
+              <th>Joint Ventures</th>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button type="button" class="btn btn-default btn-md">
+                  &larr;back
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="panel-body hidden" id="info-country-lede">
+          <div class="content">content goes here</div>
+            <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal">
+              Read more...
+            </button>
+            <button id="data-button" type="button" class="btn btn-primary btn-md">
+              See the numbers
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+            Petrocaribe Countries <small>(click each country for more details)</small>
+          </h3>
+        </div>
+        <div id="map">
+        </div>
+        <div class="panel-footer">Sources: Petrocaribe, SELA, and IndexMundi</div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>content goes here</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="introModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Introduction</h4>
+        </div>
+        <div class="modal-body">
+          <p>At the time that it was started, Petrocaribe was dubbed by local media the best available option for the countries involved because the savings on oil would afford them more money to spend on social programs. The oil alliance was also meant to create energy independence for the countries involved. An analysis of shipping data, original documents and WikiLeaks, shows that Petrocaribe has a spotty record of delivering on its promises, much less even reporting its annual imports and exports.</p>
+          <p>For example, Saint Lucia only reported imports on oil in 2003 and 2008; meanwhile, Venezuela reported exports on oil to Saint Lucia in 2000, 2001 and 2004-2006, according to UN shipping data through Comtrade.</p>
+          <p>Petrocaribe is really more of a diplomatic measure, according to Luz Mely Reyes, a journalist and co-founder and CEO of Efecto Cocuyo, a Venezuelan news outlet. She said the strategy is to get support from countries because Venezuela knows the importance of having allies abroad, and they took advantage of the anti-imperialist movement and the polarization against the United States to create it.</p>
+          <p>Broadly speaking, the program has been plagued by complications, including badly managed supply chains and shoddy implementation. At best, Petrocaribe is a poorly run and dysfunctional organization. At worst, Venezuela uses Petrocaribe to buy political support for its human rights practices and suppression of free speech.</p>
+          <p>Read more about the ALBA Caribe fund and Petrocaribe joint ventures <a href="ALBACaribeJointVentures.pdf" target="_blank">here</a>.</p>
+          <p>In this interactive map, you can click on various countries involved in the PetroCaribe program to learn more about their practices.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <script src="lib/d3.v3.min.js" charset="utf-8"></script>
+  <script src="lib/topojson.v1.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/bootstrap.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var margin = {top: 0, left: 0, bottom: 0, right: 0}
+      , width = parseInt(d3.select('#map').style('width'))
+      , width = width - margin.left - margin.right
+      , mapRatio = .65
+      , height = width * mapRatio;
+
+    var svg = d3.select("#map").append("svg")
+    		.attr("width", width)
+        .attr("height", height)
+				.attr("class", "root");
+
+    var hiddenCountries = ['COL', 'BRA', 'PRI', 'FRA', 'MEX', 'BRB',
+		                       'USA', 'ECU', 'PER', 'PAN', 'CRI', 'TTO'];
+    function isHiddenCountry(c) {
+			return hiddenCountries.indexOf(c) >= 0;
+		}
+
+		var projection = d3.geo.mercator()
+			.center([-73, 14])
+			.scale(width * 4 / 3)
+			.translate([width / 2, height / 2]);
+
+  	var path = d3.geo.path()
+  		.projection(projection);
+
+    var radius = d3.scale.sqrt()
+      .domain([0, 200])
+      .range([0, 50]);
+
+    var voronoi = d3.geom.voronoi()
+      .x(function(d) { return path.centroid(d)[0]; })
+      .y(function(d) { return path.centroid(d)[1]; })
+      .clipExtent([[0, 0], [width, height]]);
+
+    var legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(" + (width - 75) + "," + 15 + ")")
+      .selectAll("g")
+        .data([150,50,10])
+      .enter().append("g").attr("class", function(d){ return "legend-circle-" + d; });
+
+    legend.append("circle")
+        .attr("cy", radius)
+        .attr("r", radius);
+    legend.append("text")
+        .attr("y", function(d) { return 2 * radius(d) - 20; })
+        .attr("dy", "1.3em")
+        .text(d3.format("d"));
+
+    var legend150 = svg.selectAll(".legend-circle-150");
+    legend150.append("text")
+        .attr("dy", "1.3em")
+        .attr("y", function(d) { return -20; })
+        .attr("class", "consumption-label")
+        .style("text-anchor","middle")
+        .text("Total Consumption");
+    var quotaLegend = legend150.append("text")
+        .attr("y", function(d) { return 2 * radius(d) - 5; })
+        .attr("dy", "1.3em")
+        .attr("class", "quota-label")
+        .style("text-anchor","middle");
+      quotaLegend.append("tspan").attr("x",0).attr("dy","1.3em").text("Petrocaribe Quota");
+      quotaLegend.append("tspan")
+        .attr("x",0).attr("dy","1.3em")
+        .classed("note", true)
+        .text("(1000 barrels/day)");
+
+  	d3.json("caribe.json", function(error, caribe) {
+      if (error) return console.error(error);
+
+  		console.log(caribe);
+
+      var countries = topojson.feature(caribe, caribe.objects.countries);
+
+    	svg.selectAll(".country")
+    			.data(countries.features)
+  		  .enter().append("path")
+    			.attr("class", function(d) { return "country " + d.id; })
+    			.attr("d", path)
+					.classed("ghost", function(d) { return isHiddenCountry(d.id); });
+
+			svg.append("path")
+				.datum(topojson.mesh(caribe, caribe.objects.countries, function(a, b) {
+					return a !== b && !(isHiddenCountry(a.id) && isHiddenCountry(b.id));
+				}))
+				.attr("d", path)
+				.attr("class", "border");
+
+			svg.append("path")
+					.datum(topojson.mesh(caribe, caribe.objects.countries, function(a, b) {
+						return a === b && isHiddenCountry(a.id)
+							|| a !== b && isHiddenCountry(a.id) && isHiddenCountry(b.id);
+					}))
+					.attr("d", path)
+					.attr("class", "border ghost");
+
+      var bubble = svg.append("g")
+        .attr("class", "bubble")
+      .selectAll("circle")
+        .data(countries.features
+          .sort(function(a, b) { return b.properties.quotaKbd - a.properties.quotaKbd; })
+          .filter(function(d) { return !isHiddenCountry(d.id); }))
+      .enter();
+      bubble.append("circle")
+        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+        .attr("r", function(d) { return radius(d.properties.quotaKbd) || 0; })
+        .attr("class", function(d){ return "quota " + d.id; });
+      bubble.append("circle")
+        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+        .attr("r", function(d) { return radius(d.properties.consumptionKbd) || 0; })
+        .attr("class", function(d){ return "consumption " + d.id; });
+
+      svg.selectAll(".country-label")
+          .data(countries.features.filter(function(d) {
+            return !isHiddenCountry(d.id);
+          }))
+      .enter().append("text")
+        .attr("class", function(d) { return "country-label " + d.id; })
+        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+        .attr("dy", ".35em")
+        .attr("font-size", 12)
+        .text(function(d) { return d.properties.name; })
+        .attr("x", function(d) {
+          return ['KNA', 'VCT', 'DMA'].indexOf(d.id) >= 0 ? -7 :
+                ['ATG', 'BLZ', 'LCA', 'GRD'].indexOf(d.id) >= 0 ? 10 : 0;
+        })
+        .style("text-anchor", function(d) {
+          return ['KNA', 'VCT', 'DMA', 'SLV'].indexOf(d.id) >= 0 ? "end" :
+                ['ATG', 'DOM', 'BLZ', 'LCA', 'GRD'].indexOf(d.id) >= 0 ? "start" : "middle";
+        });
+
+      bubble.append("text")
+        .attr("transform", function(d) {
+           return "translate(" + (path.centroid(d)[0])
+              + "," + (path.centroid(d)[1] - (radius(d.properties.consumptionKbd) || 0)
+              - ('VEN' === d.id ? -10 : 'BLZ' !== d.id ? 7 : 12)) + ")";
+         })
+        .attr("dy", ".35em")
+        .attr("font-size", 12)
+        .attr("class", function(d){ return "consumption-label specific " + d.id; })
+        .style("text-anchor", function(d) {
+          return ['DOM', 'VEN', 'GUY', 'SUR', 'JAM'].indexOf(d.id) >= 0 ? "middle" :
+                 ['HND', 'NIC', 'SLV'].indexOf(d.id) >= 0 ? "start" : "end";
+        })
+        .text(function(d) { return d.properties.consumptionKbd + " KB/D"; });
+      bubble.append("text")
+        .attr("transform", function(d) {
+           return "translate(" + (path.centroid(d)[0])
+              + "," + (path.centroid(d)[1] + ((radius(d.properties.quotaKbd))||0)
+              + (d.id !== 'GUY' ? 8 : 12)) + ")";
+         })
+        .attr("dy", ".35em")
+        .attr("font-size", 12)
+        .attr("class", function(d){ return "quota-label specific " + d.id; })
+        .style("text-anchor", function(d) {
+          return ['DOM', 'SUR', 'SLV'].indexOf(d.id) >= 0 ? "middle" :
+                 ['GTM', 'CUB', 'JAM', 'HTI', 'GUY'].indexOf(d.id) < 0 ? "start" : "end";
+        })
+        .text(function(d) { return  d.properties.quotaKbd > 0 ?
+          (d.properties.quotaKbd + " KB/D" + (d.id === 'CUB' ? "*" : "")) : ""; });
+
+
+        //Initiate a group element to place the voronoi diagram in
+        var voronoiGroup = svg.append("g")
+          .attr("class", "voronoiWrapper");
+        voronoiGroup.selectAll("path")
+            .data(voronoi(countries.features.filter(function(d) {
+              return !isHiddenCountry(d.id);
+            }))) //Use vononoi() with your dataset inside
+          .enter().append("path")
+            .attr("d", function(d, i) { return "M" + d.join("L") + "Z"; })
+          .attr("class", function(d,i) { return "voronoi " + d.id; })
+            //.style("stroke", "#2074A0") //I use this to look at how the cells are dispersed as a check
+            .style("fill", "none")
+            .style("stroke-width", "1px")
+            .style("pointer-events", "all")
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout)
+            .on("touchstart", touchstart)
+            .on("mousedown", mousedown)
+            .on("mouseup", mouseup)
+            .on("click", click);
+
+        d3.select(window).on('resize', resize);
+
+        function resize() {
+            // adjust things when the window size changes
+            width = parseInt(d3.select('#map').style('width'));
+            width = width - margin.left - margin.right;
+            height = width * mapRatio;
+
+            // update projection
+            projection
+                .translate([width / 2, height / 2])
+                .scale(width * 4 / 3);
+
+            // resize the map container
+            svg.attr('width', width).attr('height', height);
+
+            // resize the map
+            svg.selectAll('.country').attr('d', path);
+            svg.selectAll('.border').attr('d', path);
+            svg.selectAll(".country-label")
+              .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; });
+            svg.selectAll(".quota")
+              .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; });
+            svg.selectAll(".consumption")
+              .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; });
+
+            voronoi
+              .x(function(d) { return path.centroid(d)[0]; })
+              .y(function(d) { return path.centroid(d)[1]; })
+              .clipExtent([[0, 0], [width, height]]);
+
+              svg.selectAll(".voronoi")
+                  .data(voronoi(countries.features.filter(function(d) {
+                    return !isHiddenCountry(d.id);
+                  })))
+                  .attr("d", function(d, i) { return "M" + d.join("L") + "Z"; });
+
+              svg.select(".legend").attr("transform", "translate(" + (width - 75) + "," + 15 + ")");
+              svg.selectAll(".consumption-label.specific")
+                .attr("transform", function(d) {
+                   return "translate(" + (path.centroid(d)[0])
+                      + "," + (path.centroid(d)[1] - (radius(d.properties.consumptionKbd) || 0)
+                      - ('VEN' === d.id ? -10 : 'BLZ' !== d.id ? 8 : 12)) + ")";
+                 })
+               svg.selectAll(".quota-label.specific")
+                 .attr("transform", function(d) {
+                    return "translate(" + (path.centroid(d)[0])
+                       + "," + (path.centroid(d)[1] + ((radius(d.properties.quotaKbd))||0)
+                       + (d.id !== 'GUY' ? 8 : 12)) + ")";
+                  })
+        }
+		});
+
+    function mouseover(d,i) {
+      d3.selectAll("."+d.point.id).classed("highlighted",true);
+      d3.selectAll(".legend text").classed("highlighted",true);
+    }
+
+    function mouseout(d,i) {
+      d3.selectAll("."+d.point.id).classed("highlighted",false);
+      d3.selectAll(".legend text").classed("highlighted",false);
+    }
+
+    function mousedown(d,i) {
+      d3.selectAll(".quota."+d.point.id).classed("mousedown",true);
+      d3.selectAll(".consumption."+d.point.id).classed("mousedown",true);
+      d3.select("#content-panel").classed("panel-info",false);
+      d3.select("#content-panel").classed("panel-warning",true);
+      d3.select("#content-panel").classed({"panel-info": false, "panel-warning": true});
+    }
+
+    function mouseup(d,i) {
+      d3.selectAll(".quota."+d.point.id).classed("mousedown",false);
+      d3.selectAll(".consumption."+d.point.id).classed("mousedown",false);
+      d3.select("#content-panel").classed({"panel-info": true, "panel-warning": false});
+    }
+
+    function touchstart(d,i) {
+      d3.selectAll(".highlighted").classed("highlighted",false);
+      click(d,i);
+    }
+
+    function click(d,i) {
+      var properties = d.point.properties;
+
+      d3.select(".country-name a").text(properties.name);
+
+      // populate content
+      d3.select("#info-data-country td").text(properties.name);
+      d3.select("#myModal .modal-title").text(properties.name);
+      d3.select("#info-data-consumption td").text((properties.consumptionKbd + " thousand barrels/day") || "N/A");
+      d3.select("#info-data-quota td").text(properties.quotaKbd ? (properties.quotaKbd + " thousand barrels/day") : "N/A");
+      d3.select("#info-data-actual td").text(!properties.quotaKbd ? "N/A" : properties.actualKbd ? (properties.actualKbd + " thousand barrels/day") : "none");
+      d3.select("#info-data-products td").text(properties.products || "N/A");
+      d3.select("#info-data-joined-year td").text(properties.joinedYear || "N/A");
+      d3.select("#info-data-infra td").text(properties.infraProjects || "N/A");
+      d3.select("#info-data-social td").text(properties.socialProjects || "N/A");
+      d3.select("#info-data-alba td").text(properties.albaAlimentos || "N/A");
+      d3.select("#info-data-joint td").text(properties.jointVentures || "N/A");
+
+      d3.html("content/"+ d.point.id + ".html", function(error,content) {
+        if (error) {
+          console.error(error);
+          d3.select("#info-country-lede button").classed("hidden", true);
+        } else {
+          d3.select("#info-country-lede button").classed("hidden", false);
+        }
+
+        d3.select("#info-country-lede .content").html(error ?
+          "<p>No content can be found for: " + properties.name + "</p>" :
+          d3.select(content).select(".lede").html());
+
+        g_content = content;
+
+        if(d3.select(content).select(".full-story").empty()) {
+          d3.select("#info-country-lede button").classed("hidden", true);
+        } else {
+          d3.select("#myModal .modal-body").html(error ?
+            "<p>WTH?</p>" :
+            d3.select(content).select(".full-story").html());
+        }
+
+        console.log(content);
+
+        navigateToCountry();
+      });
+    }
+
+    d3.select(".intro-link a").on("click", navigateToIntro);
+    d3.select(".country-name a").on("click", navigateToCountry);
+    d3.select(".data-link a").on("click", navigateToData);
+    d3.select("#data-button").on("click", navigateToData);
+    d3.select("#info-data-container button").on("click", navigateToCountry);
+
+    function navigateToIntro() {
+      d3.select("#info-intro-content").classed("hidden", false);
+      d3.select("#info-data-container").classed("hidden", true);
+      d3.select("#info-country-lede").classed("hidden", true);
+
+      d3.select(".intro-link a").classed("inactivelink", true);
+      d3.select(".intro-link").classed("active", true);
+      d3.select(".country-name").classed("hidden", true);
+      d3.select(".data-link").classed("hidden", true);
+    }
+
+    function navigateToCountry() {
+      d3.select("#info-intro-content").classed("hidden", true);
+      d3.select("#info-data-container").classed("hidden", true);
+      d3.select("#info-country-lede").classed("hidden", false);
+
+      d3.select(".intro-link a").classed("inactivelink", false);
+      d3.select(".intro-link").classed("active", false);
+      d3.select(".country-name a").classed("inactivelink", true);
+      d3.select(".country-name").classed("active", true);
+      d3.select(".data-link a").classed("inactivelink", false);
+      d3.select(".data-link").classed("active", false);
+
+      d3.select(".country-name").classed("hidden", false);
+      d3.select(".data-link").classed("hidden", false);
+    }
+
+    function navigateToData() {
+      d3.select("#info-intro-content").classed("hidden", true);
+      d3.select("#info-data-container").classed("hidden", false);
+      d3.select("#info-country-lede").classed("hidden", true);
+
+      d3.select(".intro-link a").classed("inactivelink", false);
+      d3.select(".intro-link").classed("active", false);
+      d3.select(".country-name a").classed("inactivelink", false);
+      d3.select(".country-name").classed("active", false);
+      d3.select(".data-link a").classed("inactivelink", true);
+      d3.select(".data-link").classed("active", true);
+
+      d3.select(".country-name").classed("hidden", false);
+      d3.select(".data-link").classed("hidden", false);
+    }
+
+    </script>
+</body>

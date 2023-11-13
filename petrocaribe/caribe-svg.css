@@ -1,0 +1,114 @@
+.country {
+  fill: #DB8
+}
+
+.country.VEN {
+  fill: #f66;
+}
+
+.country.VEN.highlighted {
+  fill: #f66;
+}
+
+.country.highlighted {
+  fill: #008000;
+}
+
+.country.ghost {
+  fill: #CCC;
+  fill-opacity: 0.3;
+}
+
+.border {
+  stroke: #FFF;
+  stroke-width: 1;
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.border.ghost {
+  stroke-dasharray: 2,2;
+}
+
+.border.highlighted {
+  stroke: #f00;
+}
+
+.city {
+  stroke: #080;
+  stroke-width: 2;
+  fill: none;
+}
+
+.country-label.highlighted {
+  font-weight: bold;
+}
+
+.consumption-label {
+  visibility: hidden;
+}
+
+.quota-label {
+  visibility: hidden;
+}
+
+.consumption-label.highlighted {
+  visibility: visible;
+  fill: #00f;
+  font-weight: bold;
+}
+
+.quota-label.highlighted {
+  visibility: visible;
+  fill: #f66;
+  font-weight: bold;
+}
+
+.quota-label.highlighted .note {
+  fill: #ccc;
+}
+
+.root {
+  stroke-width: 0px;
+  background-color: #cff;
+}
+
+.quota {
+  fill-opacity: .4;
+}
+
+.consumption {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.quota.highlighted {
+  fill-opacity: .8;
+  stroke: none;
+  fill: #f66;
+}
+
+.quota.highlighted.mousedown {
+  fill: #ffd700;
+}
+
+.consumption.highlighted {
+  stroke: #00f;
+  stroke-width: 3px;
+}
+
+.consumption.highlighted.mousedown {
+  stroke-width: 5px;
+}
+
+.legend circle {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+.legend text {
+  fill: #777;
+  text-anchor: middle;
+}

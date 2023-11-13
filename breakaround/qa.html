@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Hot Dog Emoji Football</title>
+    <meta charset="utf-8">
+    <link href="../../lib/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../../lib/phaser.js"></script>
+</head>
+
+<body>
+
+    <div id="game"></div>
+
+    <script src="Boot.js"></script>
+    <script src="Preload.js"></script>
+    <script src="Game.js"></script>
+    <script>
+        var game = new Phaser.Game(600, 600, Phaser.AUTO, 'game');
+
+        game.state.add('BreakAround.Boot', BreakAround.Boot);
+        game.state.add('BreakAround.Preload', BreakAround.Preload);
+        game.state.add('BreakAround.Game', BreakAround.Game);
+
+        game.state.start('BreakAround.Boot');
+
+    </script>
+
+</body>
+
+</html>

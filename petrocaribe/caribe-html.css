@@ -1,0 +1,8 @@
+.hidden {
+  display: none;
+}
+
+.inactivelink {
+  pointer-events: none;
+  color: #777;
+}
